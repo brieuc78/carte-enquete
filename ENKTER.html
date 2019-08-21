@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+
+
+<html>
+	<head>
+		<meta charset=utf-8  name="viewport"  http-equiv="content-type"  content="width=device-width, initial-scale=1.0"/>
+
+  <!-- Style polygones -->
+		<title>Carte ENKTER SA MERE&nbsp; </title>
+		
+		   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"/>
+  <script type="text/javascript" src="./lib/leaflet.js"></script>
+   
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" > </script> 
+ <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+  
+
+  
+			<style>
+ #map {
+  position:absolute;
+    width: 100%;
+    height:100%;
+	background-color:white;
+	position:center;
+	bottom:0px;
+	
+	}
+   
+   body,html{
+    height:100%;
+	weight: 100%;
+	margin:0px;
+	padding:0px;
+	background:#92ba52; 
+	right:0px;
+	left:0px;
+	
+}
+
+
+
+#map1 {
+ position:fixed;
+  border-bottom: 1px solid #ddd;
+  bottom: 57%;
+  right:0px;
+  height: 19%;
+  width: calc(25% - 1px);
+  
+}
+
+
+#map2 {
+  position: absolute;
+  border-bottom: 1px solid #ddd;
+  bottom: 76%;
+  right:0px;
+  height: 19%;
+  width: calc(25% - 1px);
+   
+}
+
+#map3 {
+position: fixed;
+  border-bottom: 1px solid #ddd;
+  bottom: 38%;
+  right:0px;
+  height: 19%;
+  width: calc(25% - 1px);
+   
+ 
+}
+
+
+#map4 {
+position: fixed;
+  border-bottom: 1px solid #ddd;
+  bottom: 19%;
+  right: 0px;
+  height: 19%;
+  width: calc(25% - 1px);
+  
+}
+
+#map5{
+position: fixed;
+  right: 0px;
+  bottom: 0px;
+  height: 19%;
+  width: calc(25% - 1px);
+   
+}
+ 
+ iframe {
+  
+  display: block;
+  position: fixed;
+  border: none;
+  width: 100%;
+  height:auto;
+  
+}
+
+ .leaflet-popup-tip-container {
+	margin: 0px;
+    width: 40px;
+    height: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+</style>
+
+</head>
+	
+	
+<body>
+ <div>
+ 
+ <div id='map' 
+	 margin="0"
+	  name= "France métropolitaine"  
+	  id="FM"
+  
+      width="100%"
+      height="93%"
+	 >
+ </div>
+ 
+ <div id='map1' >
+	<iframe  margin="0"
+	  name= "France métropolitaine"  
+	  id="MAYO"
+     
+      width="10%"
+      height="20%"
+	  
+      >
+    </iframe> 
+ </div>
+ 
+ <div id='map2' >
+	<iframe  margin="0"
+	  name= "France métropolitaine"  
+	  id="MARTI"
+     
+      width="10%"
+      height="20%"
+	  
+      >
+    </iframe> 
+	
+	 <div id='map3' 
+	 margin="0"
+	  name= "France métropolitaine"  
+	  id="FM"
+     
+      width="100%"
+      height="93%"
+	 >
+ </div>
+ 
+ <div id='map4' >
+	<iframe  margin="0"
+	  name= "France métropolitaine"  
+	  id="MAYO"
+   
+      width="10%"
+      height="20%"
+	  
+      >
+    </iframe> 
+ </div>
+ 
+ <div id='map5' >
+	<iframe  margin="0"
+	  name= "France métropolitaine"  
+	  id="MARTI"
+    
+      width="10%"
+      height="20%"
+	  
+      >
+    </iframe> 
+ </div>
+ 
+ 
+ 
+ 
+ 
+ </div>
+ 
+  <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+   integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+   crossorigin=""></script>
+			
+			
+			<script>
+
+  // France
+  var map = L.map('map',{
+  center: [47.11, 4.17],
+  gestureHandling: 'cooperative',
+  zoom: 6,
+  });
+    //Mayotte
+  var map2 = L.map('map2',{
+  center: [-12.834,45.161 ],
+  gestureHandling: 'cooperative',
+  zoom: 9,
+  }); 
+//Guadeloupe
+   var map1 = L.map('map1',{
+  center: [16.265000,-61.551000],
+  gestureHandling: 'cooperative',
+  zoom: 8,
+  }); 
+
+  //Reunion
+    var map3 = L.map('map3',{
+  center: [-21.1156, 55.5294],
+  gestureHandling: 'cooperative',
+  zoom: 8,
+  }); 
+  //martinique
+  var map4 = L.map('map4',{
+  center: [14.633, -60.997],
+  gestureHandling: 'cooperative',
+  zoom: 9,
+  }); 
+  //Guyanne
+   var map5 = L.map('map5',{
+  center: [3.95, -53.05],
+  gestureHandling: 'cooperative',
+  zoom: 6,
+  }); 
+
+
+////////////////FOND DE CARTE
+
+///////////////////////////EPCI
+
+
+//////////////////////////////////////DEPARTEMENT
+ $.getJSON("DEPARTEMENT.geojson",function(data_DEP){
+							// ajouter le fichier GeoJSON � la carte une fois le fond charg�
+    var DEP = L.geoJson(data_DEP,{
+	  style: function(feature){
+      var fillColor,
+	  color,
+	 
+							// D�finir la varialbe "DENSITE"
+       pop = feature.properties.ENKTER;
+							// Valeur de discr�tisation
+	   if (pop == 'Oui') fillColor = "#6aa600";
+	   else fillColor ="#deedc2", color="#ffffff"; // no data
+	   return {color: "black", opacity:0.065, weight:2, fillColor: fillColor, fillOpacity: 0.35};
+	   },
+
+							// Affichage de la popup
+	  onEachFeature: function(feature, layer){
+		var pop = feature.properties.ENKTER;
+		if (pop == 'Oui'){
+		layer.bindPopup("<strong>" + feature.properties.NOM + "</strong><br/>" )
+  }}
+ 	})
+	
+	
+  DEP.addTo(map);
+   });
+   
+   
+   
+
+///////////////////////////////////////REGION 
+
+  $.getJSON("REGION.geojson",function(data_REG){
+      
+	var REG=  L.geoJson(data_REG,{
+      filter: function(feature, layer) {
+                  return feature.properties.ENKTER == "Oui";
+              },
+ style: function (feature, layer) {
+        return { fillColor:"#ffffff",color: "#024096", weight: 2, opacity:1, fillOpacity: 0 };
+             },
+
+			
+ 
+    /// // Affichage de la popup
+ onEachFeature: function(feature, layer){
+
+	  var pop = feature.properties.ENKTER;
+      if (pop == "Oui"){
+
+	   layer.bindPopup("<strong>" + feature.properties.NOM + "</strong><br/>")
+  }}
+     })	 
+//	 setTimeout(function(){ //////////controle superposition de couche
+//   REG.bringToFront();  
+ // },2000);
+	 	setTimeout(function(){ //////////controle superposition de couche
+  REG.bringToFront();  
+ },2000);
+  REG.addTo(map5) 
+  REG.addTo(map4)
+  REG.addTo(map3)
+  REG.addTo(map2)
+  REG.addTo(map1)
+  REG.addTo(map);
+   });
+	
+	
+	
+	
+	
+	
+	
+	
+ $.getJSON("EPCI_POINT.geojson",function(data_point){
+  
+  
+  
+  
+  
+  // ajouter le fichier GeoJSON � la carte une fois le fond charg�
+ var EPCI=  L.geoJson(data_point,{
+   filter: function(feature, layer) {
+     
+               return feature.properties.ENKTER == "Oui";
+           },
+
+/// // Affichage de la popup
+	onEachFeature: function(feature, layer){
+	 layer.bindPopup("<strong>" + feature.properties.NOM + "</strong><br/>" )
+	 },
+	 
+	  
+			
+	// pointToLayer: function(feature,latlng){
+	//		label = String(feature.properties.NOM_MIN) // Must convert to string, .bindTooltip can't use straight 'feature.properties.attribute'
+  //  return  L.CircleMarker(latlng, {
+ //     radius: 1,
+ //  }).tooltip('label',{permanent: true, opacity: 0.7}); 
+ //   } 
+		
+			
+pointToLayer: function (feature, latlng) {
+           return L.marker(latlng, {
+                icon: L.icon({
+                    iconUrl: 'icon.png',
+                 iconSize:     [8, 8], 
+                    iconAnchor:   [8, 8], 
+                    popupAnchor:  [8, 8], 
+				 
+					 
+               })
+       })}
+	 
+	})
+
+	// 	EPCI.addTo(map5) 
+  //EPCI.addTo(map4)
+//EPCI.addTo(map3)
+  //EPCI.addTo(map2)
+  //EPCI.addTo(map1)
+  EPCI.addTo(map);
+ });
+
+ 
+
+
+
+
+</script>
+
+
+
+ 
+</body>
+</html>

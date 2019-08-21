@@ -1,0 +1,11 @@
+https://stackoverflow.com/questions/21078310/how-can-i-style-layer-control-in-leaflet-js
+https://www.google.com/search?q=L.control.layers+css&rlz=1C1PRFB_frFR836FR836&oq=L.control.layers+css&aqs=chrome..69i57j0l2.2687j0j7&sourceid=chrome&ie=UTF-8
+http://jsfiddle.net/km5H9/1/
+https://stackoverflow.com/questions/51544086/using-several-marker-cluster-groups-displays-overlapping-clusters
+http://jsfiddle.net/iofirag/Ltub5bgv/18/
+https://openlayers.org/en/latest/examples/layer-extent.html
+https://openlayers.org/en/latest/examples/ 					-> extent
+https://openlayers.org/en/latest/examples/navigation-controls.html
+https://openlayers.org/en/latest/examples/getfeatureinfo-layers.html
+https://openlayers.org/en/latest/examples/navigation-controls.html
+http://jsfiddle.net/marsone/9uhc3/

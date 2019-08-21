@@ -1,0 +1,601 @@
+<!DOCTYPE html5>
+<!-- $.getJSON(URL,function(données){
+  // Une ou plusieurs instructions pour traiter les données lues
+}); -->
+
+<html>
+<head>
+    <meta charset=utf-8 name="viewport" http-equiv="content-type" content="width=device-width, initial-scale=1.0"/>
+
+    <!-- Style polygones -->
+    <title>Enquête Territoires&nbsp; </title>
+    <link rel="icon" type="image/png" href=".\LOGO\URL.png"/>
+    <!-- R�f�rences ext�rieures -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+          integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+          crossorigin=""/>
+		  
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"/>
+
+
+    
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	
+    <!--<script type="text/javascript" src="./lib/leaflet.js"></script>
+    <script type="text/javascript" src="./lib/leaflet-hash.js"></script>
+    <script type="text/javascript" src="./lib/turf.min.js"></script>
+    <script type="text/javascript" src="./lib/proj4.min.js"></script>-->
+
+
+    <!-- <script src="/Scripts/jquery-ui-1.10.2.js"></script>
+   <script src="/Scripts/jquery.unobtrusive-ajax.js"></script>
+   <script src="/Scripts/jquery.validate.js"></script>
+   <script src="/Scripts/jquery.validate.unobtrusive.js"></script>
+   <script src="/Scripts/bootstrap.js"></script> -->
+    <!-- Variable de style. Peut �tre dans ins�r� dans un fichier CSS -->
+	 
+    <style>
+      
+     <!--    #header {
+			position:fixed;
+            height: 10%;
+            background: #92ba52;
+            top: 0px;
+        } -->
+
+        -->
+		div{
+			border-radius: 10px;
+			
+		}
+
+
+        #map1 {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            position: center;
+            bottom: 10%;
+            right: 10%;
+
+        }
+		
+		
+
+        body, html {
+            height: 100%;
+            weight: 100%;
+            margin: 0px;
+            padding: 0px;
+            background: white;
+            right: 0px;
+            left: 0px;
+
+        }
+
+
+        .leaflet-popup-tip-container {
+            margin: 0px;
+            width: 40px;
+            height: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .legend {
+            top: 0px;
+            right: 0px;
+        }
+
+        .legend {
+            background-color: white;
+            opacity: 0.7;
+        }
+
+
+        h1 {
+            position: auto;
+            text-height: auto;
+            font-family: sans-serif;
+            color: black;
+            text-align: center;
+            padding: 0px 0px 0px 0px;
+        }
+
+        a#LOGO {
+
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            WIDTH: auto;
+            HEIGHT: 8%;
+            text-align: right;
+        }
+        a#LOGO img {height: 100%;width: auto;}
+		
+		 a#LOGO2 {
+            position: fixed;
+            left: 0px;
+            bottom: 5px;
+            WIDTH: auto;
+            HEIGHT: 8%;
+            text-align: right;
+        }
+        a#LOGO2 img { height: 100%; width: auto;}
+		
+		 a#LOGO3 {
+            position: fixed;
+            right: 0%;
+            bottom: 5px;
+            WIDTH: auto;
+            HEIGHT: 8%;
+            text-align: right;
+        }
+        a#LOGO3 img { height: 100%; width: auto;}
+		
+		 a#LOGO4 {
+            position: fixed;
+            left: 89%;
+            bottom: 3%;
+            WIDTH: 150px;
+            HEIGHT:2%;
+            text-align: left;
+        }
+        a#LOGO4 img { height: 100%; width: auto;}
+		
+		<!-- 
+		#nav_bar{
+		position:fixed;
+		bottom:10px;
+		right:10px;
+		} -->
+		
+		
+         ul li {
+			position:relative;
+            text-height: center;
+			text-align:right;
+			 display: inline; 
+			 border-radius: 10px;
+		}
+
+		ul {
+
+			display: inline; 
+			list-style-type: none;
+			margin: 0px;
+			padding: 0;
+			background-color: #f1f1f1;
+		}
+
+		li a {
+			font-family: sans-serif;
+			text-align:center;
+			display: inline; 
+			color: #000;
+			padding: 0px 10%;
+			text-decoration: none;
+			
+			
+		}
+
+		li a.active {
+			background-color: #4CAF50;
+			color: white;
+		}
+
+		li a:hover:not(.active) {
+			background-color: #555;
+			color: white;
+		}
+
+
+		.leaflet-tooltip.my-labels {
+			background-color: #ffffff;
+			border: transparent;
+			box-shadow: none;
+			font-weight: bold;
+			font-size: 100%;
+			font-family: sans-serif;
+		}
+		
+		#select{    
+		
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			background-color: white;
+			position: center;
+			bottom:10%;
+			left: 10px;
+			background-color:#dfdfdf;		
+		}
+		
+		select#mySelect3{
+			width:100%;
+			high:90%;
+		}
+		select#mySelect2{
+			width:100%;
+			high:90%;
+		}
+		select#mySelect1{
+			width:100%;
+			high:90%;
+		}
+		select#mySelect4{
+			width:100%;
+			high:90%;
+		}
+		
+		L{
+		width:100%;
+		height:100%;
+		}
+		
+		h4{
+		
+            text-height: 4;
+            font-family: sans-serif;
+            color: black;
+            text-align: center;
+            padding: 0px 0px 0px 0px;
+		}
+		
+		#navigation{
+		position: fixed;
+			width: 15%;
+			height: 100%;
+			position: center;
+			bottom: 10%;
+			right: 10px;
+			
+			background-color:white;	
+		}
+	
+		
+		#metropole{
+		position: fixed;
+			width: 9%;
+			height: 12%;
+			background-color: #ffffff;
+			position: center;
+			top: 10%;
+			right: 10px;
+			
+		}
+		#gouadeloupe{
+		position: fixed;
+			width: 9%;
+			height: 12%;
+			background-color: #ffffff;
+			position: center;
+			top: 23%;
+			right: 10px;
+			
+		}
+		#martinique{
+		position: fixed;
+			width: 9%;
+			height: 12%;
+			background-color: #ffffff;
+			position: center;
+			top: 36%;
+			right: 10px;
+			
+		}
+		#guiane{
+		position: fixed;
+			width: 9%;
+			height: 12%;
+			background-color: #ffffff;
+			position: center;
+			top: 49%;
+			right: 10px;
+			
+		}
+		
+			#reunion{
+		position: fixed;
+			width: 9%;
+			height: 12%;
+			background-color: #ffffff;
+			position: center;
+			top: 62%;
+			right: 10px;
+			
+		}
+		#mayotte{
+		position: fixed;
+			width: 9%;
+			height: 12%;
+			background-color: #ffffff;
+			position: center;
+			top: 75%;
+			right: 10px;
+			
+		}
+		.iconnav{
+		right:15px;
+		height:90%;
+		weight:250px;
+	text-align: center;}
+
+
+		
+.controlHeading { font-size: 1.2em; }
+.leaflet-control-layers-group-name{
+font-weight:700;
+margin-bottom:.2em;
+margin-left:5px; 
+text-align:center;
+font-family:1px sans-serif;
+}
+.leaflet-control-layers-group{
+margin-bottom:.5em
+
+}
+.leaflet-control-layers-selector{
+margin-left:35px;
+
+}
+
+
+
+
+	
+		
+		.REALISATION{
+		   position: fixed;
+            width: 100%;
+            height: 8%;
+            background-color: white;
+            position: center;
+            bottom: 10%;
+            left: 10px;
+		}
+	
+#titre{
+
+top:10%;
+}
+    </style>
+	
+
+</head>
+
+
+<body>
+
+<div id="titre">
+<h1>Cartographie de l'Enquête Territoires 2019</h1>
+</div>
+<div id="REALISATION" style='width:30%;height:8%'>
+<!-- <div >
+<a id="LOGO" href= "https://www.velo-territoires.org/" >
+	<img class="icon logo"
+		SRC=".\LOGO\LOGO Enquete Territoires.jpg" 
+		ALT="Vélo & Territoires">	 
+	</img>
+</a> 
+</div>-->	
+<div>	
+<a id="LOGO2" href= "https://www.velo-territoires.org/" >
+	<img class="icon logo"
+		SRC=".\LOGO\V&T.jpg" 
+		ALT="V&T">	 
+	</img>
+</a>
+</div>		
+<!-- <div>
+<a id="LOGO3" href= "https://www.velo-territoires.org/" >
+	<img class="icon logo"
+		SRC=".\LOGO\ademe.png" 
+		ALT="V&T">	 
+	</img>
+</a>
+</div> -->	
+<div>
+<a id="LOGO3"  >
+	<img class="icon logo"
+		SRC=".\LOGO\ademe.png" 
+		ALT="V&T">	 
+	</img>
+</a>	
+</div>	
+</div>
+
+
+<div>
+    <div id='select' class="selectList" style='width: 18%; height:80%'>
+		<h4>Liste des Répondants</h4>
+		
+	<div id='L' style='width: 100%; height:22%'>
+		<select id="mySelect3" size="5" >
+			<option value="data_REG">---Région---</option> 
+		</select>
+	</div>
+	
+	<div id='L' style='width: 100%; height:22%'>
+		<select id="mySelect1" size="7">
+			<option value="data_DEP_surf">---Département---</option> 
+		</select>
+	</div>
+
+	<div id='L' style='width: 100%; height:22%' >
+		<select id="mySelect2" size="12">
+			<option value="data_point">---Intercommunalité---</option> 
+		</select>
+	</div>
+	
+	
+
+	</div>
+	
+	<div id='navigation' style='width:9%; height:80%'>
+		<div id="controls">
+			<nav id="nav_bar">
+				<ul>
+			
+					<div id='metropole'>
+						<li><a href="#" data-coordinates="46.694667307773116;2.61474609375" data-zoom="6"  >Métropole 
+								
+						<img class="iconnav" SRC=".\LOGO\FRANCE.png" ></img></a></li>
+						
+					</div>
+			
+					<div id='gouadeloupe'>
+						<li><a href="#" data-coordinates="16.265000;-61.551000" data-zoom="8">Guadeloupe
+						<img class="iconnav" SRC=".\LOGO\GUADA.png" ></img></a></li>
+					</div>
+			
+					<div id='martinique'>
+						<li><a href="#" data-coordinates="14.633;-60.997" data-zoom="9">Martinique
+						<img class="iconnav" SRC=".\LOGO\MARTI.png" ></img></a></li>
+					</div>
+			
+					<div id='guiane'>
+						<li><a href="#" data-coordinates="3.95;-53.05" data-zoom="6">Guyane
+						<img class="iconnav" SRC=".\LOGO\GUY.png" ></img></a></li>
+					</div>
+					<div id='reunion'>
+						<li><a href="#" data-coordinates="-21.1156;55.5294" data-zoom="8">Réunion
+						</a><img class="iconnav" SRC=".\LOGO\REU.png" ></img></li>
+					</div>
+					
+					<div id='mayotte'>
+						<li><a href="#" data-coordinates="-12.834;45.1614" data-zoom="9">Mayotte
+						<img class="iconnav" SRC=".\LOGO\MAYO.png" ></img></a></li>
+					</div>
+					
+					
+				</ul>
+			</nav>
+		</div> 
+	</div>
+	
+
+
+	
+	
+</div>
+
+
+ 
+    <div id='map1' style='width: 70%; height:80%'>
+	
+</div>
+<div class='my-legend'>
+
+
+  <ul class='legend-labels'>
+  <div class='legend-title-LABEL-1'>Légende</div>
+  <div class='legend-title'>Avec schéma cyclable</div>
+    <li><span style='background:#243a85;'></span>Région </li>
+    <li><span style='background:#90bb45;'></span>Département </li>
+    <li><span style='background:black;'></span>Intercommunalité </li>
+	    
+	 <div class='legend-title'>Sans schéma cyclable</div>
+     <li><span style='background:#008bce;'></span>Région</li>
+    <li><span style='background:#d5e3a4;'></span>Département </li>
+    <li><span style='background:grey;'></span>Intercommunalité </li>
+	    
+		
+
+
+   </ul>
+  </div>
+  </div>
+<style type='text/css'>
+	.my-legend{
+		position:fixed;
+		left:20%;
+		bottom:15%;
+		max-width:160px;
+		background-color: white;
+		}
+		.my-legend .legend-title-LABEL-1 {
+    text-align: center;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 100%;
+	font-family:sans-serif;
+    }
+  .my-legend .legend-title {
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 90%;
+	font-family:sans-serif;
+    }
+  .my-legend .legend-scale ul {
+    margin: 0;
+    margin-bottom: 5px;
+    padding: 0;
+    float: left;
+    list-style: none;
+	font-family:sans-serif;
+    }
+  .my-legend .legend-scale ul li {
+    font-size: 80%;
+    list-style: none;
+    margin-left: 0;
+    line-height: 18px;
+    margin-bottom: 2px;
+	font-family:sans-serif;
+	
+    }
+  .my-legend ul.legend-labels li span {
+    display: block;
+    float: left;
+    height: 16px;
+    width: 30px;
+    margin-right: 5px;
+    margin-left: 0;
+    border: 1px solid #999;
+	font-family:sans-serif;
+    }
+  .my-legend .legend-source {
+    font-size: 70%;
+    color: #999;
+    clear: both;
+    }
+  .my-legend a {
+    color: #777;
+    }
+</style>
+	
+	
+	
+	
+	
+
+
+<script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+        integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+        crossorigin=""></script>
+
+<script type="text/javascript" src="js/script.js"></script>
+
+<!-- <script type="text/javascript" src="js/script_repondant.js"></script> -->
+<script type="text/javascript" src="js/script_surface.js"></script>
+<script type="text/javascript" src="js/list_REGION.js"></script>
+<script type="text/javascript" src="js/list_DEPARTEMENT.js"></script>
+<script type="text/javascript" src="js/list_EPCI.js"></script>
+<!-- <script type="text/javascript" src="js/list_AUTRE.js"></script> -->
+<script type="text/javascript" src="lib/grp.js"></script>
+ <!--<script type="text/javascript" src="js/tests.js"></script> -->
+<!-- src="qgis2web_2019_06_03-13_36_12_022343/index.html" -->
+
+
+<!--  <script src="https://maps.googleapis.com/maps/api/js?key=file:///D:/SIG/Dropbox%20(Vélo&Territoires)/1_ON3V/NAS/06_CARTES_ANALYSE_ON3V/Enquête_Territoires/2019/dossier%20Qgis/couche%20ADMIN/CARTE_ENKTER/ekt.html#"></script> -->
+
+<!-- <script> alert("Attention les yeux, ca va piquer !!!! XD "); </script>  -->
+</body>
+
+<!-- auteur Brieuc Letellier avec la participation de Damien Letellier pour le compte de l'assocition Vélo & Territoires-->
+</html>
+
+
+

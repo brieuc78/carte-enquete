@@ -1,0 +1,300 @@
+{
+	"type" : "FeatureCollection",
+	"name" : "REGION_POINT",
+	"features" : [
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 2.1365857897, 43.7018916385 ]
+			},
+			"properties" : {
+				"ID" : "REGION__0000000000000001",
+				"NOM_REG" : "OCCITANIE",
+				"INSEE_REG" : "76",
+				"NOM_REG_2" : "Occitanie",
+				"ENKTER" : "Oui",
+				"PLAN" : "OUI",
+				"NOM" : "Occitanie",
+				"Code géographique" : 76,
+				"A1_SQ002_. Code postal du siège :" : 31000,
+				"A2. Nature juridique : " : "Région",
+				"Statut" : "R",
+				"_looked_up" : ""
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 1.685282704, 47.4808352723 ]
+			},
+			"properties" : {
+				"ID" : "REGION__0000000000000002",
+				"NOM_REG" : "CENTRE-VAL DE LOIRE",
+				"INSEE_REG" : "24",
+				"NOM_REG_2" : "Centre - Val de Loire",
+				"ENKTER" : "Oui",
+				"PLAN" : "OUI",
+				"NOM" : "Centre-Val de Loire",
+				"Code géographique" : 24,
+				"A1_SQ002_. Code postal du siège :" : 45000,
+				"A2. Nature juridique : " : "Région",
+				"Statut" : "R",
+				"_looked_up" : ""
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 0.1070016944, 49.1211758389 ]
+			},
+			"properties" : {
+				"ID" : "REGION__0000000000000003",
+				"NOM_REG" : "NORMANDIE",
+				"INSEE_REG" : "28",
+				"NOM_REG_2" : "Normandie",
+				"ENKTER" : "Oui",
+				"PLAN" : "OUI",
+				"NOM" : "Normandie",
+				"Code géographique" : 28,
+				"A1_SQ002_. Code postal du siège :" : 14035,
+				"A2. Nature juridique : " : "Région",
+				"Statut" : "R",
+				"_looked_up" : ""
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 0.1926081632, 45.1921680222 ]
+			},
+			"properties" : {
+				"ID" : "REGION__0000000000000004",
+				"NOM_REG" : "NOUVELLE-AQUITAINE",
+				"INSEE_REG" : "75",
+				"NOM_REG_2" : "Nouvelle Aquitaine",
+				"ENKTER" : "Oui",
+				"PLAN" : "OUI",
+				"NOM" : "Nouvelle-Aquitaine",
+				"Code géographique" : 75,
+				"A1_SQ002_. Code postal du siège :" : 33074,
+				"A2. Nature juridique : " : "Région",
+				"Statut" : "R",
+				"_looked_up" : ""
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 5.6189312699, 48.6897504511 ]
+			},
+			"properties" : {
+				"ID" : "REGION__0000000000000005",
+				"NOM_REG" : "GRAND EST",
+				"INSEE_REG" : "44",
+				"NOM_REG_2" : "Grand Est",
+				"ENKTER" : "Oui",
+				"PLAN" : "NON",
+				"NOM" : "Grand Est",
+				"Code géographique" : 44,
+				"A1_SQ002_. Code postal du siège :" : 67070,
+				"A2. Nature juridique : " : "Région",
+				"Statut" : "R",
+				"_looked_up" : ""
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 6.0581080148, 43.9573277719 ]
+			},
+			"properties" : {
+				"ID" : "REGION__0000000000000006",
+				"NOM_REG" : "PROVENCE-ALPES-COTE D'AZUR",
+				"INSEE_REG" : "93",
+				"NOM_REG_2" : "Provence Alpes Cote d'Azur (PACA)",
+				"ENKTER" : "Oui",
+				"PLAN" : "OUI",
+				"NOM" : "Sud Provence Alpes-Côte d'Azur",
+				"Code géographique" : 93,
+				"A1_SQ002_. Code postal du siège :" : 13481,
+				"A2. Nature juridique : " : "Région",
+				"Statut" : "R",
+				"_looked_up" : ""
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 4.5382346831, 45.515752469 ]
+			},
+			"properties" : {
+				"ID" : "REGION__0000000000000007",
+				"NOM_REG" : "AUVERGNE-RHONE-ALPES",
+				"INSEE_REG" : "84",
+				"NOM_REG_2" : "Auvergne Rhone Alpes",
+				"ENKTER" : "Oui",
+				"PLAN" : "OUI",
+				"NOM" : "Auvergne Rhône-Alpes",
+				"Code géographique" : 84,
+				"A1_SQ002_. Code postal du siège :" : 69269,
+				"A2. Nature juridique : " : "Région",
+				"Statut" : "R",
+				"_looked_up" : ""
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 4.8091099345, 47.2353220778 ]
+			},
+			"properties" : {
+				"ID" : "REGION__0000000000000008",
+				"NOM_REG" : "BOURGOGNE-FRANCHE-COMTE",
+				"INSEE_REG" : "27",
+				"NOM_REG_2" : "Bourgogne Franche Compte",
+				"ENKTER" : "Oui",
+				"PLAN" : "OUI",
+				"NOM" : "Bourgogne-Franche-Comté",
+				"Code géographique" : 27,
+				"A1_SQ002_. Code postal du siège :" : 25000,
+				"A2. Nature juridique : " : "Région",
+				"Statut" : "R",
+				"_looked_up" : ""
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -0.8248962705, 47.4749862678 ]
+			},
+			"properties" : {
+				"ID" : "REGION__0000000000000009",
+				"NOM_REG" : "PAYS DE LA LOIRE",
+				"INSEE_REG" : "52",
+				"NOM_REG_2" : "Pays de la Loire",
+				"ENKTER" : "Oui",
+				"PLAN" : "OUI",
+				"NOM" : "Pays de la Loire",
+				"Code géographique" : 52,
+				"A1_SQ002_. Code postal du siège :" : 44000,
+				"A2. Nature juridique : " : "Région",
+				"Statut" : "R",
+				"_looked_up" : ""
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 2.7748364573, 49.9669701615 ]
+			},
+			"properties" : {
+				"ID" : "REGION__0000000000000010",
+				"NOM_REG" : "HAUTS-DE-FRANCE",
+				"INSEE_REG" : "32",
+				"NOM_REG_2" : "Hauts de France",
+				"ENKTER" : "Oui",
+				"PLAN" : "OUI",
+				"NOM" : "Hauts-de-France",
+				"Code géographique" : 32,
+				"A1_SQ002_. Code postal du siège :" : 59555,
+				"A2. Nature juridique : " : "Région",
+				"Statut" : "R",
+				"_looked_up" : ""
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -2.839638297, 48.1795531703 ]
+			},
+			"properties" : {
+				"ID" : "REGION__0000000000000011",
+				"NOM_REG" : "BRETAGNE",
+				"INSEE_REG" : "53",
+				"NOM_REG_2" : "Bretagne",
+				"ENKTER" : "Oui",
+				"PLAN" : "OUI",
+				"NOM" : "Bretagne",
+				"Code géographique" : 53,
+				"A1_SQ002_. Code postal du siège :" : 35000,
+				"A2. Nature juridique : " : "Région",
+				"Statut" : "R",
+				"_looked_up" : ""
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 9.1056525641, 42.1494008416 ]
+			},
+			"properties" : {
+				"ID" : "REGION__0000000000000012",
+				"NOM_REG" : "CORSE",
+				"INSEE_REG" : "94",
+				"NOM_REG_2" : "Corse",
+				"ENKTER" : "Oui",
+				"PLAN" : "NON",
+				"NOM" : "Collectivité de Corse",
+				"Code géographique" : 94,
+				"A1_SQ002_. Code postal du siège :" : 20090,
+				"A2. Nature juridique : " : "Région",
+				"Statut" : "R",
+				"_looked_up" : ""
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 2.5046316211, 48.7092171782 ]
+			},
+			"properties" : {
+				"ID" : "REGION__0000000000000013",
+				"NOM_REG" : "ILE-DE-FRANCE",
+				"INSEE_REG" : "11",
+				"NOM_REG_2" : "Ile de France",
+				"ENKTER" : "Oui",
+				"PLAN" : "OUI",
+				"NOM" : "Ile-de-France",
+				"Code géographique" : 11,
+				"A1_SQ002_. Code postal du siège :" : 93400,
+				"A2. Nature juridique : " : "Région",
+				"Statut" : "R",
+				"_looked_up" : ""
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 55.5327888133, -21.1337965343 ]
+			},
+			"properties" : {
+				"ID" : "REGION__0000000000000001",
+				"NOM_REG" : "LA REUNION",
+				"INSEE_REG" : "04",
+				"NOM_REG_2" : "La Reunion",
+				"ENKTER" : "Oui",
+				"PLAN" : "OUI",
+				"NOM" : "Réunion",
+				"Code géographique" : 4,
+				"A1_SQ002_. Code postal du siège :" : 97400,
+				"A2. Nature juridique : " : "Région",
+				"Statut" : "R",
+				"_looked_up" : ""
+			}
+		}
+	]
+}
